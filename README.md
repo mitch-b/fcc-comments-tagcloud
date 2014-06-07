@@ -4,11 +4,10 @@ FCC Public Comment Tag Cloud
 View tag cloud of what the public is saying in their FCC comments around net neutrality
 
 #Prerequisites
-1. Python 2.7 ([downloads](https://www.python.org/download/releases/2.7.7/))
+1. Python 2.7 32-bit ([downloads](https://www.python.org/download/releases/2.7.7/))
 2. python-pygame Library (available via apt-get, or [binaries here](http://www.pygame.org/download.shtml))
 3. pip Python package manager ([instructions](https://pip.pypa.io/en/latest/installing.html))
 4. MySQL database instance (community edition [binaries here](http://dev.mysql.com/downloads/mysql/))
-5. MySQL Python Connector ([downloads](http://dev.mysql.com/downloads/connector/python/))
 
 #Getting Started
 
@@ -17,8 +16,11 @@ Clone this repository & install Python packages:
 ```bash
 $> git clone https://github.com/mitch-b/fcc-comments-tagcloud.git
 $> cd fcc-comments-tagcloud
-$> pip install -r requirements.txt     # may require elevated privileges
+$> pip install -r requirements.txt
+$> pip install --allow-external mysql-connector-python mysql-connector-python
 ```
+
+*The pip installations might require elevated privileges.*
 
 #Configuring MySQL
 
@@ -31,6 +33,9 @@ $> mysql -u username -p < mysql.ddl.sql
 ```
 
 Provide your username above, and it will execute the commands required to host our application. For now, the user has a default password which should get you up and running, but do change this if you plan on hosting this on a machine that is accessed by others.
+
+###Configuring pygame for Windows virtualenv Users
+If you're using virtualenv (if you're unsure what that is, skip this section), you'll need to copy in the pygame installation files into your virtualenv folder. I couldn't find a way to have the installer run in my virtualenv, nor could I get it to install via pip, so I simply copied from my Python installation, ie, `C:\Python27\Lib\site-packages\pygame`, and `C:\Python27\include\pygame` folders to their matching locations in `~/.virtualenv` or wherever you store your work areas.
 
 #How It Works
 
