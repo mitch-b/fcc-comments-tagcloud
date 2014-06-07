@@ -1,0 +1,6 @@
+pyyaml
+nltk
+feedparser
+pdfminer
+pytagcloud
+simplejson
