@@ -4,7 +4,7 @@ FCC Public Comment Tag Cloud
 View tag cloud of what the public is saying in their FCC comments around net neutrality
 
 #Prerequisites
-1. Python 2.7 32-bit ([downloads](https://www.python.org/download/releases/2.7.7/))
+1. Python 2.7 32-bit ([downloads](https://www.python.org/download/releases/2.7.7/)) - *will need Python 2.7.x installed from python.org, not Apple provided Python package in order to install pygame library*
 2. python-pygame Library (available via apt-get, or [binaries here](http://www.pygame.org/download.shtml))
 3. pip Python package manager ([instructions](https://pip.pypa.io/en/latest/installing.html))
 4. MySQL database instance (community edition [binaries here](http://dev.mysql.com/downloads/mysql/))
