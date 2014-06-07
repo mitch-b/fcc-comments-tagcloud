@@ -29,7 +29,7 @@ CREATE TABLE `comments` (
 
 
 CREATE USER 'fccwebuser'@'localhost' IDENTIFIED BY 'changeit';
-GRANT SELECT, INSERT ON 'fcc_comments'.* TO 'fccwebuser2'@'localhost';
+GRANT SELECT, INSERT ON `fcc_comments`.* TO 'fccwebuser'@'localhost';
 FLUSH PRIVILEGES;
 
 -- Dump completed on 2014-06-06 18:55:42
